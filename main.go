@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/blockchain/core"
+	"github.com/dooheeh/blockchain/core"
 )
 
 func main() {
