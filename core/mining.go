@@ -16,7 +16,6 @@ func (blockchain *Blockchain) Mining() uint32 {
 	i := 1
 	for ; CompareHash(hash, diff); hash, i = sha256.Sum256(blockchain.CandidateBlock.Header.ToBytes()), i+1 {
 		blockchain.CandidateBlock.Header.Nonce = blockchain.CandidateBlock.Header.Nonce + 1
-		time.Sleep(300 * time.Millisecond)
 	}
 	fmt.Printf("Try : %d\n", i)
 	fmt.Printf("Difficulty : %d\n", diff)
